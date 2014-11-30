@@ -1,8 +1,8 @@
 Package.describe({
   name: 'd2t:dribbble',
-  summary: ' /* Fill me in! */ ',
+  summary: ' Connect to Dribbble package ',
   version: '1.0.0',
-  git: ' /* Fill me in! */ '
+  git: 'https://github.com/d2tstudio/dribbble.git'
 });
 
 Package.onUse(function(api) {
