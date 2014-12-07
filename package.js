@@ -7,11 +7,29 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.0');
-  api.addFiles('d2t:dribbble.js');
+
+  // Deps
+  api.use(['coffescript','mquandalle:jade','mquandalle:stylus','templating'])
+
+  // Clientside
+  api.addFiles([
+    'client/components/dribbble.jade',
+    'client/components/dribbble_config.jade',
+    'client/components/dribbble_shots.jade',
+    'client/components/dribbble.coffee',
+    'stylesheets/dribbble.styl'
+  ], 'client');
+
+  // server
+  api.addFiles(
+    'server/dribbble.coffee'
+    ,'server');
+
+
 });
 
 Package.onTest(function(api) {
   api.use('tinytest');
   api.use('d2t:dribbble');
-  api.addFiles('d2t:dribbble-tests.js');
+  api.addFiles('tests.js');
 });
