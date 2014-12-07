@@ -9,7 +9,7 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   // Deps
-  api.use(['coffescript','mquandalle:jade','mquandalle:stylus','templating'])
+  api.use(['coffeescript','mquandalle:jade','mquandalle:stylus','templating'])
 
   // Clientside
   api.addFiles([
@@ -17,7 +17,7 @@ Package.onUse(function(api) {
     'client/components/dribbble_config.jade',
     'client/components/dribbble_shots.jade',
     'client/components/dribbble.coffee',
-    'stylesheets/dribbble.styl'
+    'client/stylesheets/dribbble.styl'
   ], 'client');
 
   // server
