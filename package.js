@@ -1,5 +1,5 @@
 Package.describe({
-  name: 'd2t:dribbble',
+  name: 'd2tstudio:dribbble',
   summary: ' Connect to Dribbble package ',
   version: '1.0.0',
   git: 'https://github.com/d2tstudio/dribbble.git'
@@ -9,7 +9,11 @@ Package.onUse(function(api) {
   api.versionsFrom('1.0');
 
   // Deps
-  api.use(['coffeescript','mquandalle:jade','mquandalle:stylus','templating'])
+  api.use([
+    'coffeescript@1.0.4',
+    'mquandalle:jade@0.2.8',
+    'mquandalle:stylus@1.0.7',
+    'templating@1.0.0'])
 
   // Clientside
   api.addFiles([
