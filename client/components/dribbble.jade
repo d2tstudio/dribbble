@@ -1,9 +1,15 @@
 template(name="dribbble")
   .dribbble.portfolio
-    if account.dribbble.username
-      +dribbbleShots
-      +dribbbleConfig
-    else
-      if currentUser
-          form
-            input(type="text", name="username", placeholder="Add your Dribbble username").form-control.input-lg
+      .options
+        button.btn.btn-link.toggle(data-target="#DribbbleOptions")
+          span.glyphicon.glyphicon-align-justify.glyphicon-white
+          
+      #DribbbleOptions.overlay
+        +dribbbleConfig
+      
+      if account.dribbble.username
+        +dribbbleShots
+      else
+        if currentUser
+            form
+              input(type="text", name="username", placeholder="Add your Dribbble username").form-control.input-lg
